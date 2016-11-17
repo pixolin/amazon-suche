@@ -28,43 +28,30 @@ with this program; if not, write to the Free Software Foundation, Inc.,
 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA. -->
 */
 
-if ( ! is_defined( ABSPATH ) ) {
-	exit;
-}
+if ( ! defined( 'ABSPATH' ) ) die;
 
 add_shortcode( 'amazon-suche','pix_shortcode_amazon' );
-function pix_shortcode_amazon( $atts ) {
+function pix_shortcode_amazon() {
 
 	$out =
-		'<script charset=“utf-8″ type=“text/javascript“>
-            amzn_assoc_ad_type = „responsive_search_widget“;
-            amzn_assoc_tracking_id = „Partner ID“;
-            amzn_assoc_marketplace = „amazon“;
-            amzn_assoc_region = „DE“;
-            amzn_assoc_placement = „“;
-            amzn_assoc_search_type = „search_box“;
-            amzn_assoc_width = „auto“;
-            amzn_assoc_height = „auto“;
-            amzn_assoc_default_search_category = „“;
-            amzn_assoc_default_search_key = „“;
-            amzn_assoc_theme = „light“;
-            amzn_assoc_bg_color = „FFFFFF“;
-        </script>';
+		'<script charset="utf-8" type="text/javascript">
+			amzn_assoc_ad_type = "responsive_search_widget";
+			amzn_assoc_tracking_id = "Partner ID";
+			amzn_assoc_marketplace = "amazon";
+			amzn_assoc_region = "DE";
+			amzn_assoc_placement = "";
+			amzn_assoc_search_type = "search_box";
+			amzn_assoc_width = "auto";
+			amzn_assoc_height = "auto";
+			amzn_assoc_default_search_category = "";
+			amzn_assoc_default_search_key = "";
+			amzn_assoc_theme = "light";
+			amzn_assoc_bg_color = "FFFFFF";
+			</script>
+			<script src="//z-eu.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&Operation=GetScript&ID=OneJS&WS=1&MarketPlace=DE">
+			</script>';
 
 	return $out;
-}
-
-add_action( 'wp_enqueue_scripts', 'pix_enqueue_script' );
-function pix_enqueue_script() {
-	$args = array(
-		$handle = 'amazon-suche',
-		$src    = '//z-eu.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&Operation=GetScript&ID=OneJS&WS=1&MarketPlace=DE',
-		$deps   = array(),
-		$ver    = false,
-		$in_footer = true,
-	);
-
-	wp_enqueue_script( $args );
 }
 
 add_filter( 'widget_text', 'do_shortcode' );
