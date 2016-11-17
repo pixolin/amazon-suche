@@ -66,3 +66,5 @@ function pix_enqueue_script() {
 
 	wp_enqueue_script( $args );
 }
+
+add_filter( 'widget_text', 'do_shortcode' );
