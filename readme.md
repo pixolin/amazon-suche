@@ -11,3 +11,5 @@ Aktiviere anschließend das Plugin.
 * Speichere das Widget.
 
 Das Plugin hat keine Optionen oder Einstellungsmöglichkeiten.
+
+Lizenz: GPLv2
