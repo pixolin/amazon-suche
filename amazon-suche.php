@@ -1,9 +1,9 @@
 <?php
 /*
 Plugin Name: Amazon Suche
-Description: Shortcode, um Amazon-Suche im Widget darzustellen
-Version: 0.1
-Author: Bego Mario Garde
+Description: Shortcode, um Amazon-Suche im Widget darzustellen. <a href="https://https://github.com/pixolin/amazon-suche">Anleitung auf Github</a>.
+Version: 0.2
+Author: Bego Mario Garde, David Remer
 Author URI: https://pixolin.de
 License: GPLv2
 */
