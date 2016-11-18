@@ -33,7 +33,7 @@ if ( ! defined( 'ABSPATH' ) ) die;
 add_shortcode( 'amazon-suche','pix_shortcode_amazon' );
 function pix_shortcode_amazon( $attr ) {
 	$default = array( 'id' => 'Partner ID' );
-	$attr = wp_parse_args( $attr, $default );
+	$attr = shortcode_atts( $default, $attr, 'amazon-suche' );
 
 	$out =
 		'<script charset="utf-8" type="text/javascript">
