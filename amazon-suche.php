@@ -31,12 +31,14 @@ with this program; if not, write to the Free Software Foundation, Inc.,
 if ( ! defined( 'ABSPATH' ) ) die;
 
 add_shortcode( 'amazon-suche','pix_shortcode_amazon' );
-function pix_shortcode_amazon() {
+function pix_shortcode_amazon( $attr ) {
+	$default = array( 'id' => 'Partner ID' );
+	$attr = wp_parse_args( $attr, $default );
 
 	$out =
 		'<script charset="utf-8" type="text/javascript">
 			amzn_assoc_ad_type = "responsive_search_widget";
-			amzn_assoc_tracking_id = "Partner ID";
+			amzn_assoc_tracking_id = "' . esc_attr( $attr['id'] ) . '";
 			amzn_assoc_marketplace = "amazon";
 			amzn_assoc_region = "DE";
 			amzn_assoc_placement = "";
