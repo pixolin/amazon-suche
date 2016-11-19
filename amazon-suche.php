@@ -2,7 +2,7 @@
 /*
 Plugin Name: Amazon Suche
 Description: Shortcode, um Amazon-Suche im Widget darzustellen. <a href="https://https://github.com/pixolin/amazon-suche">Anleitung auf Github</a>.
-Version: 0.2
+Version: 0.3
 Author: Bego Mario Garde, David Remer
 Author URI: https://pixolin.de
 License: GPLv2
@@ -50,7 +50,7 @@ function pix_shortcode_amazon( $attr ) {
 			amzn_assoc_theme = "light";
 			amzn_assoc_bg_color = "FFFFFF";
 			</script>
-			<script src="//z-eu.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&Operation=GetScript&ID=OneJS&WS=1&MarketPlace=DE">
+			<script src="//z-eu.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&Operation=GetScript&ID=OneJS&WS=1&MarketPlace=DE&internal=1">
 			</script>';
 
 	return $out;

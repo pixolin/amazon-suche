@@ -1,7 +1,7 @@
 # Amazon Suche
 
 # Installation
-Gehe in das Menü Plugins > Installieren > Hochladen und lade dort die zip-Datei https://github.com/pixolin/amazon-suche.git hoch.
+Gehe in das Menü Plugins > Installieren > Hochladen und lade dort die zip-Datei https://github.com/pixolin/amazon-suche/archive/master.zip hoch.
 Aktiviere anschließend das Plugin.
 
 # Nutzung
