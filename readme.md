@@ -5,9 +5,8 @@ Gehe in das Menü Plugins > Installieren > Hochladen und lade dort die zip-Datei
 Aktiviere anschließend das Plugin.
 
 # Nutzung
-* Füge deiner Sidebar ein neues Textwidget hinzu.
-* Setze bei Bedarf einen Titel ein.
-* Setze im Textfeld des Textwidgets folgenden Shortcode ein: `[amazon-suche]`. Zusätzlich kannst du auch deine Partner-ID eingeben: `[amazon-suche id="1234567"]`.
+* Nach Aktivierung des Plugins kannst du über das Menü Design > Widgets das Widget *Amazon Suche* in deinem Widgetbereich platzieren.
+* Gib bei Bedarf einen Titel ein und füge deine persönliche Partner-ID ein.
 * Speichere das Widget.
 
 Das Plugin hat keine Optionen oder Einstellungsmöglichkeiten.

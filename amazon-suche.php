@@ -2,8 +2,8 @@
 /*
 Plugin Name: Amazon Suche
 Description: Shortcode, um Amazon-Suche im Widget darzustellen. <a href="https://https://github.com/pixolin/amazon-suche">Anleitung auf Github</a>.
-Version: 0.3
-Author: Bego Mario Garde, David Remer
+Version: 0.4
+Author: Bego Mario Garde
 Author URI: https://pixolin.de
 License: GPLv2
 */
@@ -30,30 +30,8 @@ with this program; if not, write to the Free Software Foundation, Inc.,
 
 if ( ! defined( 'ABSPATH' ) ) die;
 
-add_shortcode( 'amazon-suche','pix_shortcode_amazon' );
-function pix_shortcode_amazon( $attr ) {
-	$default = array( 'id' => 'Partner ID' );
-	$attr = shortcode_atts( $default, $attr, 'amazon-suche' );
+require_once( __DIR__ . '/inc/widget-class.php' );
 
-	$out =
-		'<script charset="utf-8" type="text/javascript">
-			amzn_assoc_ad_type = "responsive_search_widget";
-			amzn_assoc_tracking_id = "' . esc_attr( $attr['id'] ) . '";
-			amzn_assoc_marketplace = "amazon";
-			amzn_assoc_region = "DE";
-			amzn_assoc_placement = "";
-			amzn_assoc_search_type = "search_box";
-			amzn_assoc_width = "auto";
-			amzn_assoc_height = "auto";
-			amzn_assoc_default_search_category = "";
-			amzn_assoc_default_search_key = "";
-			amzn_assoc_theme = "light";
-			amzn_assoc_bg_color = "FFFFFF";
-			</script>
-			<script src="//z-eu.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&Operation=GetScript&ID=OneJS&WS=1&MarketPlace=DE&internal=1">
-			</script>';
-
-	return $out;
-}
-
-add_filter( 'widget_text', 'do_shortcode' );
+add_action( 'widgets_init', function(){
+	register_widget( 'AmazonSucheWidget' );
+});
